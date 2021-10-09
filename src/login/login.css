@@ -1,0 +1,62 @@
+.login-container{
+  background: white;
+  border-radius: 18px;
+  width: 400px;
+  margin: auto;
+  padding: 80px 50px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 8px 9px 17px -9px black;
+  animation-name: opacityAnimat;
+  animation-duration: .8s;
+}
+@keyframes opacityAnimat {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.signAncor{
+  position: relative;
+  background: none;
+  border: .5px solid black;
+  border-radius: 3px;
+  text-decoration: none;
+  color: black;
+  margin-top: 15px;
+  padding: 5px 10px;
+  z-index: 2;
+}
+
+.signAncor::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, #FBA055 ,#F22078);
+  transform-origin: left;
+  transition: .6s ease-in-out;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.signAncor:hover::after{
+  transform: scaleX(1);
+}
+
+select{
+  padding: 3px 5px;
+  border-radius: 3px;
+  border:none;
+  border-bottom:2px solid #F22078;
+  outline: none;
+}
+a{
+  text-decoration: none;
+  color: #2864e4;
+}
+.haveAcc{
+  text-align: left;
+  margin-top: 15px;
+  font-size: 12px;
+}

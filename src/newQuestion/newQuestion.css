@@ -1,0 +1,88 @@
+.newQuestion{
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90vh;
+  animation-name: opacityAnimat;
+  animation-duration: .8s;
+}
+@keyframes opacityAnimat {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.QsContainer{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px;
+  border-radius: 15px;
+  overflow:hidden;
+  box-shadow: 1px 1px 15px -3px black;
+  margin-top: -50px;
+}
+
+.ques{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+.ques input{
+  padding: 4px 6px;
+  border: none;
+  outline: none;
+}
+input.AddInp1{border-bottom: 2px solid #F7362F;}
+input.AddInp2{border-bottom: 2px solid #4DBBF7;}
+
+.ques1{background:#4DBBF7;}
+.ques2{border-left: 1px solid black ;background:#F7362F; }
+
+.or{
+  padding: 5px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  background: black;
+  border-radius: 50%;
+  color: white;
+}
+/* ===================== ADD BTN */
+
+
+.addQbtn{
+  position: relative;
+  width: 50%;
+  background: none;
+  border: .5px solid rgb(44, 44, 44);
+  border-radius: 5px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  padding: 5px 10px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.addQbtn::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, #F7362F 30%,#4DBBF7 70%,#4DBBF7 100%);
+  transform-origin: left ;
+  transition: .6s ease-in-out;
+  transform: scaleX(0);
+  z-index: -1;
+}
+
+.addQbtn:hover::after{
+  transform: scaleX(1);
+}

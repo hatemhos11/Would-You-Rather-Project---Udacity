@@ -1,0 +1,24 @@
+.Dashboard{
+  margin: auto;
+  width: 80%;
+  height: fit-content;
+}
+@media (max-width: 700px){
+  .Dashboard{
+    width: 100%;
+  }
+}
+.Dashboard > .navAnswers {
+  display: inline-block;
+  width: 50%;
+  padding: 12px;
+  background: rgba(46, 44, 54, 0.699);
+  color: rgb(255, 255, 255);
+  border-radius: 15px 15px 0 0;
+  cursor: pointer;
+}
+.Dashboard div.active{
+  background: #000000;
+  color: rgb(243, 243, 243);
+  opacity: 1;
+}
